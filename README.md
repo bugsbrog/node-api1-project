@@ -50,7 +50,7 @@ You can find them inside `api/users/model.js`. All of these functions return Pro
 -X `findById` Takes an `id` and resolves to the user with that id (or null if the id does not exist).
 -X `insert` Takes a new user `{ name, bio }` and resolves to the newly created user `{ id, name, bio }`.
 -X `update` Takes an `id` and an existing user `{ name, bio }` and resolves the updated user `{ id, name, bio}` (or null if the id does not exist).
-- `remove` Takes an `id`  and resolves to the deleted user `{ id, name, bio }`.
+-X `remove` Takes an `id`  and resolves to the deleted user `{ id, name, bio }`.
 
 #### Endpoint Specifications
 
@@ -92,12 +92,12 @@ When the client makes a `DELETE` request to `/api/users/:id`:
 
 - If the _user_ with the specified `id` is not found:
 
-  - respond with HTTP status code `404` (Not Found).
-  - return the following JSON object: `{ message: "The user with the specified ID does not exist" }`.
+  -X respond with HTTP status code `404` (Not Found).
+  -X return the following JSON object: `{ message: "The user with the specified ID does not exist" }`.
 
 - If there's an error in removing the _user_ from the database:
-  - respond with HTTP status code `500`.
-  - return the following JSON object: `{ message: "The user could not be removed" }`.
+  -X respond with HTTP status code `500`.
+  -X return the following JSON object: `{ message: "The user could not be removed" }`.
 
 When the client makes a `PUT` request to `/api/users/:id`:
 
