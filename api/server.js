@@ -1,3 +1,18 @@
-// BUILD YOUR SERVER HERE
+const express = require('express')
+const Users = require('./users/model')
+const server = express()
 
-module.exports = {}; // EXPORT YOUR SERVER instead of {}
+server.use(express.json())
+
+server.get('/api/users', async (req, res) => {
+    try {
+        const user = await Users.find()
+        res.json(user)
+    } catch {
+        res.status(500).json({
+            message: 'The users information could not be retrieved'
+        })
+    }
+})
+
+module.exports = server;

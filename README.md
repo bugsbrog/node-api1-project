@@ -46,7 +46,7 @@ Each User _resource_ should conform to the following structure (AKA schema):
 
 You can find them inside `api/users/model.js`. All of these functions return Promises.
 
-- `find` Resolves to the list of users (or empty array).
+-X `find` Resolves to the list of users (or empty array).
 - `findById` Takes an `id` and resolves to the user with that id (or null if the id does not exist).
 - `insert` Takes a new user `{ name, bio }` and resolves to the the newly created user `{ id, name, bio }`.
 - `update` Takes an `id` and an existing user `{ name, bio }` and resolves the updated user `{ id, name, bio}` (or null if the id does not exist).
@@ -74,8 +74,8 @@ When the client makes a `POST` request to `/api/users`:
 When the client makes a `GET` request to `/api/users`:
 
 - If there's an error in retrieving the _users_ from the database:
-  - respond with HTTP status code `500`.
-  - return the following JSON object: `{ message: "The users information could not be retrieved" }`.
+  -X respond with HTTP status code `500`.
+  -X return the following JSON object: `{ message: "The users information could not be retrieved" }`.
 
 When the client makes a `GET` request to `/api/users/:id`:
 
