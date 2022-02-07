@@ -124,9 +124,9 @@ When the client makes a `PUT` request to `/api/users/:id`:
 
 #### Important Notes
 
-- Test your work manually using Postman or HTTPie. Run automatic tests by executing `npm test`.
+-X Test your work manually using Postman or HTTPie. Run automatic tests by executing `npm test`.
 - You are welcome to create additional files but **do not move or rename existing files** or folders.
-- Do not alter your `package.json` file except to install additional libraries or add additional scripts. **Do not update existing libs**.
+-X Do not alter your `package.json` file except to install additional libraries or add additional scripts. **Do not update existing libs**.
 - In your solution, it is essential that you follow best practices and produce clean and professional results.
 
 ### Task 3: Stretch Problems
